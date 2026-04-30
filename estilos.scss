@@ -1,0 +1,210 @@
+*
+{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+html
+{
+    width: 100vw;
+    height: 100vh;
+}
+body
+{
+    width: 100vw;
+    height: 100vh;
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr; 
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    overflow-x: hidden;
+}
+header
+{
+    background-color: rgb(1, 88, 122);
+    background-image: url("imgs/3.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 0px -35px;
+    position: relative;
+    height: 450px;
+    nav
+    {
+        position: absolute;
+        height: 60px;
+        width: 100%;
+        background-color: white;
+        border-bottom: 2px solid blue;
+        display: flex;
+        align-items: center;
+        .logo
+        {
+            height: 100%;
+            width: 100px;
+            img
+            {
+                height: 100%;
+                width: 100%;
+                object-fit: contain;
+            }
+        }
+        .navegando
+        {
+            margin: 0px 30px 0px auto;
+            gap: 10px;
+            display: flex;
+            span
+            {
+                padding: 10px;
+                border-radius: 5px;
+                color: blue;
+                font-weight: bolder;
+                cursor: pointer;
+                transition: 0.2s ease-in-out;
+            }
+            span:hover
+            {
+                background-color: blue;
+                color: white;
+            }
+            span:nth-child(1)
+            {
+                background-color: blue;
+                color: white;
+            }
+        }
+    }
+    h1
+    {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: white;
+        
+    }
+}
+main
+{
+    display: grid;
+    .titulo_main
+    {
+        width: 100%;
+        height: 150px;
+        display: flex;
+        flex-flow: column wrap;
+        align-items: center;
+        justify-content: center;
+    }
+    .card_produtos
+    {
+        height: fit-content;
+        padding: 50px;
+        background-color: rgb(241, 241, 241);
+        display: flex;
+        flex-flow: row wrap;
+        align-items: center;
+        justify-content: center;
+        gap: 40px;
+        overflow-x: hidden;
+        .card
+        {
+            display: flex;
+            flex-flow: column wrap;
+            width: 15%;
+            min-width: 300px;
+            padding: 0px 20px 20px 20px;
+            box-shadow: 0px 5px 15px 0px #b7b7b7;
+            border-radius: 10px;
+            justify-content: center;
+            text-align: center;
+            .img_produto
+            {
+                width: 55%;
+                height: 55%;
+                max-height: 107.11px;
+                margin: 25px auto;
+                border-radius: 10px;
+                overflow: hidden;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                object-fit: cover;
+                img
+                {
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                }
+            }
+            h4
+            {
+                margin: 0px 0px 0px 0px ;
+            }
+            button
+            {
+                width: fit-content;
+                margin: auto;
+                padding: 10px 15px;
+                background-color: rgb(0, 190, 0);
+                color: white;
+                border: none;
+                outline: none;
+                border-radius: 5px;
+                font-weight: bolder;
+                transition: 0.1s ease-in-out;
+            }
+            button:active
+            {
+                background-color: rgb(1, 143, 1);
+            }
+        }
+    }
+}
+footer
+{
+    background-color: rgb(223, 223, 223);
+    height: 200px;
+    .redes
+    {
+        width: 100%;
+        height: 75%;
+        display: flex;
+        align-items: center;
+        flex-flow: column wrap;
+        justify-content: center;
+        .img_redes
+        {
+            width: 100%;
+            height: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 20px;
+            img
+            {
+                width: fit-content;
+                height: 100%;
+                object-fit: contain;
+                overflow: hidden;
+                cursor: pointer;
+            }
+        }
+        h4
+        {
+            margin: -20px 20px 20px 20px;
+        }
+    }
+    
+    .direitos
+    {
+        background-color: black;
+        color: white;
+        width: 100%;
+        height: 25%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        bottom: 0;
+    }
+}
