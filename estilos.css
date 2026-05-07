@@ -233,10 +233,42 @@ footer .direitos {
 .header_nav .navegando span:nth-child(2) a {
   color: blue;
 }
-.header_nav .navegando span:nth-child(3) {
+
+.sobre_nav .navegando span a {
+  color: blue;
+  text-decoration: none;
+}
+.sobre_nav .navegando span:hover {
+  background-color: blue;
+  color: white;
+}
+.sobre_nav .navegando span:hover a {
+  color: white;
+  text-decoration: none;
+}
+.sobre_nav .navegando span:nth-child(2) {
   background-color: blue;
 }
-.header_nav .navegando span:nth-child(3) a {
+.sobre_nav .navegando span:nth-child(2) a {
+  color: white;
+}
+
+.contato_nav .navegando span a {
+  color: blue;
+  text-decoration: none;
+}
+.contato_nav .navegando span:hover {
+  background-color: blue;
+  color: white;
+}
+.contato_nav .navegando span:hover a {
+  color: white;
+  text-decoration: none;
+}
+.contato_nav .navegando span:nth-child(3) {
+  background-color: blue;
+}
+.contato_nav .navegando span:nth-child(3) a {
   color: white;
 }
 

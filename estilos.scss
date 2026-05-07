@@ -269,12 +269,71 @@ footer
                 color: blue;
             }
         }
+    }
+}
+.sobre_nav
+{
+    .navegando
+    {
+        span
+        {
+            a
+            {
+                color: blue;
+                text-decoration: none;
+
+            }
+        }
+        span:hover
+        {
+            background-color: blue;
+            color: white;
+            a
+            {
+                color: white;
+                text-decoration: none;
+
+            }
+        }
+        span:nth-child(2)
+        {
+            background-color: blue;
+            a
+            {
+                color: white;
+            }
+        }
+    }
+}
+.contato_nav
+{
+    .navegando
+    {
+        span
+        {
+            a
+            {
+                color: blue;
+                text-decoration: none;
+
+            }
+        }
+        span:hover
+        {
+            background-color: blue;
+            color: white;
+            a
+            {
+                color: white;
+                text-decoration: none;
+
+            }
+        }
         span:nth-child(3)
         {
             background-color: blue;
             a
             {
-
                 color: white;
             }
         }
