@@ -282,9 +282,10 @@ footer .direitos {
 }
 .main_sobre .mensagem {
   width: 75%;
+  max-width: 800px;
   height: -moz-fit-content;
   height: fit-content;
-  padding: 10px 30px;
+  padding: 30px 30px;
   border: 1px solid black;
   text-align: center;
   display: flex;

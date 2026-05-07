@@ -350,8 +350,9 @@ footer
     .mensagem
     {
         width: 75%;
+        max-width:800px;;
         height: fit-content;
-        padding: 10px 30px;
+        padding: 30px 30px;
         border: 1px solid black;
         text-align: center;
         display: flex;
