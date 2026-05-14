@@ -8,13 +8,21 @@ function alertar_sobre(nome)
 }
 
 window.addEventListener('load', () => {
-    texto_user_logado.innerHTML = user_logado
+    if(texto_user_logado)
+    {
+
+        texto_user_logado.innerHTML = user_logado
+    }
 })
 
-form_login.addEventListener('submit', (eve) =>{
+if(form_login)
+{
+    form_login.addEventListener('submit', (eve) =>{
     eve.preventDefault()
     consultarLogin()
 })
+}
+
 
 async function consultarLogin() {
     const senha = document.getElementById('senha').value;
@@ -26,29 +34,38 @@ async function consultarLogin() {
     console.log(email);
 
     user_logado = email
-    window.location.href = "dashboard.html"
+    // window.location.href = "dashboard.html"
     
-    // const url =
-    // `https://script.google.com/macros/s/AKfycbyFJxCgEh2KvnvrHqmUvrT0uaAOR10XMXLNdViHfmRvzXSd2w1nVS10qyyNcmVFAN47Pg/exec?id=${encodeURIComponent(id)}`;
+    const url =`https://script.google.com/macros/s/AKfycbyFJxCgEh2KvnvrHqmUvrT0uaAOR10XMXLNdViHfmRvzXSd2w1nVS10qyyNcmVFAN47Pg/exec?email=${encodeURIComponent(email)}`;
 
-    // try {
-    //     const response = await fetch(url);
-    //     const dados = await response.json();
+    try {
+        const response = await fetch(url);
+        const dados = await response.json();
 
-    //     const senha_encontrada = dados.senha
-    //     const email_encontrado = dados.email
+        const senha_encontrada = dados.senha
+        const email_encontrado = dados.email
 
-    //     // resultado.innerHTML = `Encontrado: ${dados.quantidade}`
+        // resultado.innerHTML = `Encontrado: ${dados.quantidade}`
+        if(dados.status == "nao_encontrado")
+        {
+            pesquisa.innerHTML = "Usuário não encontrado"
+        }
+        if(email == email_encontrado && senha != senha_encontrada)
+        {
+            pesquisa.innerHTML = "Senha Incorreta"
+        }
+        if(senha == senha_encontrada && email == email_encontrado)
+        {
+            pesquisa.innerHTML = "Achei! Redirecionando..."
+            setTimeout(() => {
+                window.location.href = "dashboard.html"
+            }, 1500);
+            // alert("dale")
+        }
+        console.log(dados);
 
-    //     if(senha == senha_encontrada && email == email_encontrado)
-    //     {
-    //         alert("dale")
-    //     }
-    //     console.log(dados);
-
-    // } catch (err) {
-    //     resultado.innerHTML = "não encontrado"
-    //     console.error(err);
-    // }
-    
+    } catch (err) {
+        resultado.innerHTML = "não encontrado"
+        console.error(err);
+    }
 }
