@@ -14,12 +14,25 @@
     </header>
     <main class="main_dashboard">
         <nav class="navegando_dashboard">
-            <button>Consultar Produto</button>
+            <button class="btn_dashboard" >Pagina inicial</button>
+            <button class="btn_dashboard" >Consultar Produto</button>
         </nav>
         <div class="display_dashboard">
-            <div class="msg_entrada">
+            <div class="card_default_dashboard msg_entrada">
                 <h2>Bem-Vindo!</h2>
                 <p>Selecione uma opção no menu lateral.</p>
+            </div>
+            <div class="card_default_dashboard consulta_produto">
+                <h2>Consultar de bombas</h2>
+                <span id="resultado_pesquisa"></span>
+                <input type="number" id="id_item_pesquisa" placeholder="Digite o id da bomba" required>
+                <button onclick="buscar_produto()">Consultar</button>
+                <div class="resultado">
+                    <img id="imagem_resultado_item" src="https://www.watertec.com.br/img/produtos/bombas-hidraulicas/megabloc.jpg" alt="">
+                    <h3 id="nome_resultado_item" >Nome do produto</h3>
+                    <p id="descri_resultado_item" >Descrição do produto</p>
+                    <span id="preco_resultado_item">R$ 200,00</span>
+                </div>
             </div>
         </div>
     </main>

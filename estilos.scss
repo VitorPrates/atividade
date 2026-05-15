@@ -509,8 +509,11 @@ footer
             min-width: 215px;
             background-color: white;
             display: flex;
+            flex-direction: column;
             padding: 10px 0px;
-            justify-content: center;
+            align-items: center;
+            gap: 7px;
+            // justify-content: center;
             button
             {
                 width: 85%;
@@ -522,23 +525,33 @@ footer
                 border-radius: 5px;
                 font-weight: bolder;
                 font-size: 0.9em;
+                transition: 0.1s ease-in-out;
+            }
+            button:active
+            {
+                transform: scale(1.1);
             }
         }
         .display_dashboard
         {
             width: 85%;
+            height: 100%;
             box-shadow: -1px 0px 5px 0px rgba(0, 0, 0, 0.37);
             background-color: #f4f4f4;
             display: flex;
             align-items: center;
             justify-content: center;
-            .msg_entrada
+            position: relative;
+            overflow: hidden;
+            .card_default_dashboard
             {
                 background-color: white;
                 text-align: center;
                 padding: 40px 60px;
                 border-radius: 10px;
                 box-shadow: 2px 2px 8px 0px rgb(97, 97, 175,0.4);
+                position: absolute;
+                transition: 0.3s ease-in-out;
                 h2
                 {
                     color: rgb(37, 37, 175);
@@ -548,7 +561,69 @@ footer
                 {
                     opacity: 0.6;
                 }
+            }   
+            .msg_entrada
+            {
+                top: 100%;
+            }
+            .consulta_produto
+            {
+                top: 10%;
+                padding: 20px;
+                display: flex;
+                flex-direction: column;
+                gap: 10px;
+                h2
+                {
+                    margin: 0 0 3px 0;
+                }
+                input
+                {
+                    width: 400px;
+                    padding: 10px;
+                }
+                button
+                {
+                    padding: 10px;
+                }
+                .resultado
+                {
+                    width: 100%;
+                    // background-color: red;
+                    overflow: hidden;
+                    text-align: left;
+                    display: flex;
+                    flex-direction: column;
+                    padding: 0 0 20px 0px;
+                    gap: 15px;
+                    border-radius: 10px;
+                    box-shadow: 3px 3px 5px 0px rgba(0, 0, 0, 0.233);
+                    img
+                    {
+                        width: 100%;
+                        max-height: 400px;
+                    }
+                    h3,p,span
+                    {
+                        margin-left: 20px;
+                    }
+                    h3
+                    {
+                        color: blue;
+                    }
+                    p
+                    {
+                        opacity: 1;
+                    }
+                    span
+                    {
+                        color: rgb(12, 150, 30);
+                        font-weight: bolder;
+                        font-size: 1.4em;
+                    }
+                }
             }
         }
     }
+    
 }
